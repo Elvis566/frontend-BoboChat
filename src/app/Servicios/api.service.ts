@@ -17,4 +17,31 @@ export class ApiService {
   getAvatar(id:any){
     return this.http.get('http://localhost:3000/avatar/obtenerAll/'+id)
   }
+
+  // apis de user
+
+  createAvatar(apodo:any, email:any, password:any, avatar_id:any, descripcion:any){
+    return this.http.post('http://localhost:3000/user/create',{
+      apodo:apodo,
+      email: email,
+      password: password,
+      avatar_id: avatar_id,
+      descripcion:descripcion
+    })
+  }
+
+  login(password: any, email:any){
+    return this.http.post('http://localhost:3000/user/login',{
+      email:email,
+      password: password
+    })
+  }
+
+  updateUser(id: any, avatar_id:any, apodo: any, descripcion: any){
+    return this.http.put('http://localhost:3000/user/update/'+id,{
+      avatar_id: avatar_id,
+      apodo: apodo,
+      descripcion:descripcion
+    })
+  }
 }
