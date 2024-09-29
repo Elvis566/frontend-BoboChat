@@ -8,6 +8,8 @@ export class ApiService {
 
   constructor(private http: HttpClient) { }
 
+  // apis de logo
+
   createLogo(avatar:any){
     let avt = new FormData();
     avt.append('avatar', avatar)
@@ -43,5 +45,26 @@ export class ApiService {
       apodo: apodo,
       descripcion:descripcion
     })
+  }
+
+  busqueda(criterio:any){
+    return this.http.get('http://localhost:3000/user/busqueda/'+criterio)
+  }
+
+  // apis de friends
+
+  createFriends(user_id:any, friend_id:any){
+    return this.http.post('http://localhost:3000/friends/create',{
+      user_id:user_id,
+      friend_id: friend_id
+    })
+  }
+
+  getFriends(id:any){
+    return this.http.get('http://localhost:3000/friends/obtener/'+id)
+  }
+
+  updateFriend(id: any, apodo: any){
+    return this.http.put('http://localhost:3000/friends/update/'+id, {apodo: apodo})
   }
 }
