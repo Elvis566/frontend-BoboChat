@@ -7,9 +7,9 @@
 <ion-content [fullscreen]="true">
   <div class="container">
     <div class="formulario">
-      <input type="text">
-      <input type="password">
-      <button>Login</button>
+      <input #password type="text">
+      <input  #email type="password">
+      <button (click)="login(password, email)" >Login</button>
       <a href="#">Forgot password?</a>
     </div>
     <div class="register">
