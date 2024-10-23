@@ -22,7 +22,7 @@ export class ApiService {
 
   // apis de user
 
-  createAvatar(apodo:any, email:any, password:any, avatar_id:any, descripcion:any){
+  createUser(apodo:any, email:any, password:any, avatar_id:any, descripcion:any){
     return this.http.post('http://localhost:3000/user/create',{
       apodo:apodo,
       email: email,

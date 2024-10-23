@@ -31,6 +31,10 @@ const routes: Routes = [
     path: 'estados',
     loadChildren: () => import('./Pages/estados/estados.module').then( m => m.EstadosPageModule)
   },
+  {
+    path: 'avatar',
+    loadChildren: () => import('./Pages/avatar/avatar.module').then( m => m.AvatarPageModule)
+  },
 ];
 
 @NgModule({

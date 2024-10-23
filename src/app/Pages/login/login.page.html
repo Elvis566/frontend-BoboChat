@@ -7,13 +7,14 @@
 <ion-content [fullscreen]="true">
   <div class="container">
     <div class="formulario">
-      <input #password type="text">
-      <input  #email type="password">
+      <ion-input #email label="Email" label-placement="floating" fill="solid" placeholder="Enter text"></ion-input>
+      <ion-input #password label="Password" label-placement="floating" fill="solid" placeholder="Enter text" type="password"></ion-input>
+
       <button (click)="login(password, email)" >Login</button>
       <a href="#">Forgot password?</a>
     </div>
     <div class="register">
-      <p>Do you want to register? <span><a href="#">Register</a></span></p>
+      <p>Do you want to register? <span><a href="/register">Register</a></span></p>
     </div>
   </div>
 </ion-content>

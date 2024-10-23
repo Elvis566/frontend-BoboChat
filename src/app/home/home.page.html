@@ -1,20 +1,39 @@
 <ion-header [translucent]="true">
   <ion-toolbar>
-    <ion-title>
-      Blank
-    </ion-title>
+
   </ion-toolbar>
 </ion-header>
 
-<ion-content [fullscreen]="true">
-  <ion-header collapse="condense">
-    <ion-toolbar>
-      <ion-title size="large">Blank</ion-title>
-    </ion-toolbar>
-  </ion-header>
 
-  <div id="container">
-    <strong>Ready to create an app?</strong>
-    <p>Start with Ionic <a target="_blank" rel="noopener noreferrer" href="https://ionicframework.com/docs/components">UI Components</a></p>
-  </div>
+<ion-content [fullscreen]="true" >
+  <ion-list>
+    <ion-item>
+      <ion-avatar slot="start">
+        <img src="assets/avatar1.png" />
+      </ion-avatar>
+      <ion-label>
+        <h2>Nombre del contacto</h2>
+        <p>Último mensaje...</p>
+      </ion-label>
+      <ion-note slot="end">16:04</ion-note>
+    </ion-item>
+
+    <ion-item>
+      <ion-avatar slot="start">
+        <img src="assets/avatar2.png" />
+      </ion-avatar>
+      <ion-label>
+        <h2>Nombre del contacto</h2>
+        <p>Último mensaje...</p>
+      </ion-label>
+      <ion-note slot="end">14:45</ion-note>
+    </ion-item>
+  </ion-list>
+
+  <!-- Botón flotante para iniciar nuevo chat -->
+  <ion-fab vertical="bottom" horizontal="end" slot="fixed">
+    <ion-fab-button>
+      <ion-icon name="chatbubble-outline"></ion-icon>
+    </ion-fab-button>
+  </ion-fab>
 </ion-content>
